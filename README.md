@@ -1,5 +1,5 @@
 # TDD_UI_Framework
-Basic TDD testing framework for UI with Java
+Basic TDD testing framework for UI with Java 8
 
 Used External Libraries:
 -Selenium
