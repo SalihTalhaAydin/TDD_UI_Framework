@@ -1,4 +1,4 @@
-package ui.utils;
+package utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -85,6 +85,11 @@ public class WaitUtils {
         }
     }
 
+    /**
+     *
+     * @param driver
+     * @return
+     */
     public static WebDriverWait wait(WebDriver driver){
         return new WebDriverWait(driver,
                 Integer.parseInt(ConfigReader.getProperty("timeoutForExplicitWait")));

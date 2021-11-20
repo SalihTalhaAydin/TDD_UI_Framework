@@ -60,7 +60,7 @@ public class Driver {
     }
 
     /**
-     * quitting driver if it is initialized
+     * quitting driver and deleting the all cookies if it is initialized
      */
     public static void quitDriver() {
         if (driver != null) {
