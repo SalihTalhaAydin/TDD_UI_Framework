@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="example suite">
+    <test name="example test">
+        <classes>
+            <class name="tests.ExampleTest">
+                <!-- include or exclude your tests here -->
+            </class>
+        </classes>
+    </test>
+</suite>
