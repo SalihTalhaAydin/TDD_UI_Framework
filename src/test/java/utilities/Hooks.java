@@ -14,6 +14,8 @@ public class Hooks {
         this.browser = browser;
     }
 
+    // declare your page objects under and create it in @BeforeMethod
+
     public WebDriver driver;
 
     @BeforeMethod
