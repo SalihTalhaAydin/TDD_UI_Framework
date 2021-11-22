@@ -11,7 +11,7 @@ public class Hooks {
     private String browser = "chrome";
 
     // for changing the browser if it's needed
-    public void setBrowser(String browser){
+    public void setBrowser(String browser) {
         this.browser = browser;
     }
 
@@ -20,12 +20,12 @@ public class Hooks {
     public WebDriver driver;
 
     @BeforeMethod
-    public void setup(){
+    public void setup() {
         driver = Driver.getDriver(browser);
     }
 
     @AfterMethod
-    public void teardown(){
+    public void teardown() {
         Driver.quitDriver();
     }
 
