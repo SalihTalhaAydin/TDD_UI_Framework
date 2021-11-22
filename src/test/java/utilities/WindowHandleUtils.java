@@ -6,42 +6,62 @@ import java.util.Set;
 
 public class WindowHandleUtils {
 
-    public static String switchToNotMainWindow(WebDriver driver) {
-        String mainWindow = driver.getWindowHandle();
-        Set<String> windows = driver.getWindowHandles();
+    /**
+     *
+     * @param driver
+     * @return
+     */
 
-        for (String window : windows) {
-            if (!window.equals(mainWindow)){
+    public static String switchToNotMainWindow(WebDriver driver) {
+        String currentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+
+        for (String window : allWindows) {
+            if (!window.equals(currentWindow)){
                 driver.switchTo().window(window);
                 break;
             }
         }
-        return mainWindow;
+        return currentWindow;
 
     }
 
+    /**
+     *
+     * @param driver
+     * @param url
+     * @return
+     */
+
     public static String switchToCertainWindowWithUrl(WebDriver driver, String url) {
-        String mainWindow = driver.getWindowHandle();
-        Set<String> windows = driver.getWindowHandles();
-        for (String window : windows) {
-            if (!window.equals(mainWindow)){
+        String currentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+        for (String window : allWindows) {
+            if (!window.equals(currentWindow)){
                 driver.switchTo().window(window);
                 if (driver.getCurrentUrl().contains(url))break;
             }
         }
-        return mainWindow;
+        return currentWindow;
 
     }
 
+    /**
+     *
+     * @param driver
+     * @param title
+     * @return
+     */
+
     public static String switchToCertainWindowWithTitle(WebDriver driver, String title) {
-        String mainWindow = driver.getWindowHandle();
-        Set<String> windows = driver.getWindowHandles();
-        for (String window : windows) {
-            if (!window.equals(mainWindow)){
+        String currentWindow = driver.getWindowHandle();
+        Set<String> allWindows = driver.getWindowHandles();
+        for (String window : allWindows) {
+            if (!window.equals(currentWindow)){
                 driver.switchTo().window(window);
                 if (driver.getTitle().contains(title))break;
             }
         }
-        return mainWindow;
+        return currentWindow;
     }
 }

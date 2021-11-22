@@ -6,11 +6,15 @@ import org.testng.annotations.BeforeMethod;
 
 public class Hooks {
 
+    // default test browser is chrome
     private String browser = "chrome";
 
+    // for changing the browser if it's needed
     public void setBrowser(String browser){
         this.browser = browser;
     }
+
+    // declare your page objects under and create it in @BeforeMethod
 
     public WebDriver driver;
 
@@ -21,7 +25,7 @@ public class Hooks {
 
     @AfterMethod
     public void teardown(){
-
+        Driver.quitDriver();
     }
 
 
