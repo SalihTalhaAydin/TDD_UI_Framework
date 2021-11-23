@@ -17,8 +17,9 @@ public class ConfigReader {
             properties = new Properties();
             properties.load(fileInputStream);
         }catch (Exception e ){
-            throw new NotFoundException("Error! The config file is not found. " +
-                    "{Check the path or the file existing or not}");
+            System.out.println("Error! The config file is not found. " +
+                    "{Check the path or the file existing or not}" +
+                    "Message: " + e.getMessage());
         }
     }
 
